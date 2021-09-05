@@ -1,0 +1,30 @@
+.loginForm {
+  max-width: 520px;
+  margin: 40px auto;
+}
+.center{
+  display: block;
+  width: fit-content;
+  margin: 10px auto;
+}
+
+.button-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#sign-up-link:hover{
+  background-color: rgba(0, 0, 0, 0.1);
+  opacity: 90%;
+}
+#submit-button{
+  position: relative;
+  align-self: flex-end;
+  width: fit-content;
+  margin-right: 5%;
+}
+
+mat-card-actions.center {
+  opacity: 90%;
+}

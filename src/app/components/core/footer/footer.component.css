@@ -1,0 +1,9 @@
+.footer{
+    background-color: #ddd;
+    border-top: 2px solid #bbb;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    margin-top: auto;
+    height: 38px; /* 38px footer + 2px border = 40px whole footer */
+}

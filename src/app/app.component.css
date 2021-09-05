@@ -1,0 +1,17 @@
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+main{
+    min-height: calc(100vh - 104px);
+    /* 40px footer and 64px/56px(#TODO on smaller devices) = 104px/96px  */
+}
+app-nav-bar, main, app-footer {
+    flex-shrink: 0;
+}
+.spacer {
+    /* flex: 1 was needed for flex growing feature. flex: 1 0 auto is a quickfix for safari troubles */
+    flex: 1 0 auto;
+}

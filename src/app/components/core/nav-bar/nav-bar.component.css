@@ -1,0 +1,13 @@
+.cool-coloured{
+    background-color:#A6B3FF;
+}
+.spacer{
+    flex: 1 1 auto;
+}
+mat-button-toggle-group{
+    font-size: 0.8em;
+}
+.mat-flat-button {
+  opacity: .95;
+  margin-right: 5px;
+}

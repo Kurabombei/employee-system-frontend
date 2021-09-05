@@ -1,0 +1,81 @@
+<mat-card class="registerForm">
+  <mat-card-header>
+    <h1 class="center">
+      Employee Management System
+    </h1>
+  </mat-card-header>
+  <mat-card-content >
+      <form #registerForm="ngForm" (ngSubmit) = "onRegister(registerForm.value)">
+          <div class="form-group center">
+              <mat-form-field appearance="outline">
+                  <mat-label>First Name:</mat-label>
+                  <input matInput type="text"
+                  name="firstName"
+                  placeholder="John"
+                  ngModel
+                  #firstNameInput="ngModel"
+                  required>
+                  <mat-error class="error-block">Please enter your first name</mat-error>
+              </mat-form-field>
+          </div>
+          <div class="form-group center">
+            <mat-form-field appearance="outline">
+                <mat-label>Last name:</mat-label>
+                <input matInput type="text"
+                name="lastName"
+                placeholder="Doe"
+                ngModel
+                #lastNameInput="ngModel"
+                required>
+                <mat-error class="error-block">Please enter your last name</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="form-group center">
+          <mat-form-field appearance="outline">
+              <mat-label>Job title:</mat-label>
+              <input matInput type="text"
+              name="jobTitle"
+              placeholder="Middle Java developer"
+              ngModel
+              #jobTitleInput="ngModel"
+              required>
+              <mat-error class="error-block">Please enter your job title</mat-error>
+          </mat-form-field>
+      </div>
+        <div class="form-group center">
+          <mat-form-field appearance="outline">
+              <mat-label>Username:</mat-label>
+              <input matInput type="text"
+              name="username"
+              placeholder="johndoe"
+              ngModel
+              #usernameInput="ngModel"
+              required>
+              <mat-error class="error-block">Please enter an username</mat-error>
+          </mat-form-field>
+      </div>
+          <div class="form-group center">
+              <mat-form-field appearance="outline">
+                  <mat-label>Email:</mat-label>
+                  <input matInput type="email"
+                  name="email"
+                  placeholder="johndoe@email.com"
+                  ngModel
+                  #emailInput="ngModel"
+                  required>
+                  <mat-error class="error-block">Please enter an email</mat-error>
+              </mat-form-field>
+          </div>
+          <div class="button-container">
+              <button mat-raised-button color="primary" type="submit" [disabled]="registerForm.invalid || showLoading" id="submit-button">
+                <span *ngIf="showLoading">Loading...</span>
+                <span *ngIf="!showLoading">Sign up</span>
+              </button>
+          </div>
+      </form>
+  </mat-card-content>
+  <mat-card-actions class="center">
+    <span>Already have an account? </span>
+    <a mat-flat-button routerLink="/login" color="secondary" id="log-in-link">Log into it!</a>
+  </mat-card-actions>
+</mat-card>

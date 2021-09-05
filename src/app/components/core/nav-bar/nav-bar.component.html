@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>Logo </span>
+      <span class="spacer"></span>
+      <mat-button-toggle-group name="pageChanger" *ngIf="isLoggedIn$" aria-label="change Page">
+        <mat-button-toggle class="cool-coloured" (click)="changeTitle('Employees')" value="Employees" routerLink="employees" routerLinkActive="active">
+          <mat-icon aria-hidden="false" aria-label="employees">people</mat-icon> Employees</mat-button-toggle>
+        <mat-button-toggle class="cool-coloured" (click)="changeTitle('Add-employee')" value="Add an employee" routerLink="create-employee">
+          <mat-icon aria-hidden="false" aria-label="employees">person_add</mat-icon> Add an employee</mat-button-toggle>
+      </mat-button-toggle-group>
+      <span class="spacer"></span>
+      <button mat-icon-button color="secondary" *ngIf="isLoggedIn$" aria-label="Profile button">
+        <mat-icon aria-hidden="false" (click)="changeTitle('Profile')" aria-label="account circle">account_circle</mat-icon>
+      </button>
+      <button mat-flat-button color="secondary" *ngIf="!isLoggedIn$" routerLink="login">Log in</button>
+      <button mat-flat-button color="secondary" *ngIf="isLoggedIn$" (click)="logOut()">Log out</button>
+
+    </mat-toolbar-row>
+  </mat-toolbar>

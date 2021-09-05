@@ -1,0 +1,22 @@
+.createForm {
+    max-width: 640px;
+    margin: 40px auto;
+}
+.center{
+    display: block;
+    width: fit-content;
+    margin: 10px auto;
+}
+
+.button-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+}
+
+#submitBtn{
+    position: relative;
+    align-self: flex-end;
+    width: fit-content;
+}

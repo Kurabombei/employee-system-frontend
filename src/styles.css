@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+@import "styles/spinner.css";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.badge{
+  border-radius: 10px;
+  padding: 0.25em;
+  border: #676E9E solid 1px;
+  font-size: 0.9rem;
+}
+.success{
+  background-color: rgba(80, 240, 80, 0.9);
+}
+.danger{
+  background-color: rgba(255, 80, 80, 0.9);
+}

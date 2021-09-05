@@ -1,0 +1,50 @@
+
+<mat-card class="details-card mat-elevation-z12">
+    <mat-card-header>
+      <img mat-card-avatar class="header-image" height="120" width="120" src={{employee?.profileImageUrl}}>
+      <mat-card-title-group>
+        <span>Last login was {{employee?.LastLoginDateDisplay}}</span>
+      </mat-card-title-group>
+      <mat-card-title>{{employee?.firstName + " " + employee?.lastName}}</mat-card-title>
+      <mat-card-subtitle>{{employee?.jobTitle}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <mat-list role="list">
+        <mat-list-item role="listitem"><label>id:</label>{{employee?.id}}</mat-list-item>
+        <mat-divider [inset]="true"></mat-divider>
+        <mat-list-item role="listitem"><label>uid:</label>{{employee?.userId}}</mat-list-item>
+        <mat-divider [inset]="true"></mat-divider>
+        <mat-list-item role="listitem"><label>username:  </label>{{employee?.username}}</mat-list-item>
+        <mat-divider [inset]="true"></mat-divider>
+        <mat-list-item role="listitem"><label>Name:  </label>{{employee?.firstName}}</mat-list-item>
+        <mat-divider [inset]="true"></mat-divider>
+        <mat-list-item role="listitem"><label>Surname:  </label>{{employee?.lastName}}</mat-list-item>
+        <mat-divider [inset]="true"></mat-divider>
+        <mat-list-item role="listitem"><label>Email:  </label>{{employee?.email}}</mat-list-item>
+        <mat-divider [inset]="true"></mat-divider>
+        <mat-list-item role="listitem"><label>Job Title:</label>{{employee?.jobTitle}}</mat-list-item>
+        <mat-divider [inset]="true"></mat-divider>
+        <mat-list-item role="listitem"><label>Role:</label>{{employee!.role.substring(5)}}</mat-list-item>
+        <mat-divider [inset]="true"></mat-divider>
+        <mat-list-item role="listitem"><div class="status"><label>Status:</label>
+          <span [hidden]="!employee?.active" class = "badge success">Active</span>
+          <span [hidden]="employee?.active" class = "badge danger">Inactive</span>
+        </div></mat-list-item>
+        <mat-divider [inset]="true"></mat-divider>
+        <mat-list-item role="listitem"><div class="status"><label>Locked:</label>
+          <span [hidden]="!employee?.locked" class = "badge danger">Locked</span>
+          <span [hidden]="employee?.locked" class = "badge success">Unlocked</span>
+        </div></mat-list-item>
+        <mat-divider [inset]="true"></mat-divider>
+        <mat-list-item role="listitem" *ngIf="employee?.LastLoginDateDisplay"><label>Last login date:</label>{{employee?.LastLoginDateDisplay | date: 'medium'}}</mat-list-item>
+        <mat-divider [inset]="true"></mat-divider>
+        <mat-list-item role="listitem"><label>Joined:</label>{{employee?.joinDate | date: 'medium'}}</mat-list-item>
+        <mat-divider [inset]="true"></mat-divider>
+
+      </mat-list>
+    </mat-card-content>
+    <mat-card-actions>
+      <!-- <button mat-button color="primary">Update</button> -->
+    </mat-card-actions>
+  </mat-card>
