@@ -18,7 +18,7 @@ export class AuthenticationGuard implements CanActivate {
     }
     this.router.navigate(['/login']);
     this.snackBar.open("You need to log in to access this page.", undefined, {
-      duration: 3000,
+      duration: 5000,
       horizontalPosition: 'end'
     });
     return false;
